@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Stratego !!!</title>
+       <link rel="stylesheet" href="./static/style.css" type="text/css"/>
+    </head>
+    <body>
+        <div id="grid">
+            <table>
+                <tr v-for="(column, key) in rows">
+                    <td v-for="(value, k) in column" v-on:click="select_or_deplace"
+                    :id="'piece_' + key + '_' + k" :data-value="value">
+                      {{ value }}
+                    </td>
+                </tr>
+            </table>
+            <div id="create-grid">
+                <button v-on:click="create">Créer la grille</button>
+            </div>
+        </div>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/msgpack-lite/0.1.26/msgpack.min.js"></script>
+       <script src="./static/axios.js"></script>
+       <script src="./static/vue.js"></script>
+        <script src="./static/script.js"></script>
+    </body>
+</html>

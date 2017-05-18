@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    overflow: hidden;
+}
+.hidden {
+    display: none;
+}
+#grid {
+    padding: 1rem;
+    width: 100vw;
+}
+#grid table {
+    margin-left: calc(50vw - 50vh + 1rem);
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    width: calc(100vh - 4rem);
+    height: calc(100vh - 4rem);
+}
+td {
+    width: 10%;
+    height: 10%;
+    border: solid 1px red;
+    text-align: center;
+}
+td.selected {
+    background: blue;
+}
+td.possible {
+    background: lightblue;
+}
+td.potential_attack {
+    background: lightcoral;
+}
+#create-grid {
+    width: 100vw;
+    left: 0;
+    position: absolute;
+}
+#create-grid button {
+    margin-left: calc(50vw - 50px);
+    width: 100px;
+}
